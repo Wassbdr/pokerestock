@@ -1,0 +1,18 @@
+# Raspberry Pi / petit serveur Linux : surveillance en continu.
+# Installation : voir README, section « Alternative : Raspberry Pi ».
+[Unit]
+Description=PokeRestock - surveillance des restocks Pokémon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/pokerestock
+ExecStart=/home/pi/pokerestock/.venv/bin/python -m pokerestock boucle
+Restart=always
+RestartSec=60
+Nice=10
+
+[Install]
+WantedBy=multi-user.target

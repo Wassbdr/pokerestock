@@ -1,0 +1,87 @@
+# Produits surveillés.
+# - plafond : prix maximum accepté (€). Au-dessus -> état « trop_cher », pas d'alerte.
+# - priorite : « chaud » = notification priorité maximale + vérifié plus souvent.
+# - mots_cles : chaque phrase est un ensemble de mots qui doivent TOUS apparaître
+#   (sans tenir compte des accents ni des majuscules) pour qu'une annonce ou une
+#   fiche découverte soit rattachée au produit.
+# - exclure : mots qui écartent une annonce (ex. « display » pour un bundle).
+# - urls : fiches connues par enseigne (clé = nom dans enseignes.yaml).
+# - secours : pages d'agrégateurs suivies pour ce produit.
+
+produits:
+  - id: bundle-30ans
+    nom: Bundle 6 boosters 30 ans
+    ean: "0196214145221"
+    plafond: 39.99
+    priorite: chaud
+    mots_cles: ["bundle 30 ans", "bundle 30e anniversaire", "lot de boosters 30e anniversaire", "lot 6 boosters 30"]
+    exclure: [display, etb, "dresseur d elite", tin, classeur]
+    urls:
+      joueclub: [https://www.joueclub.fr/pokemon/pokemon-bundle-6-boosters-0196214145221.html]
+      lagranderecre: [https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/-6-boosters-pokemon-30e-anniversaire.html]
+      amazon: [https://www.amazon.fr/dp/B0H8T1LY94]
+      smyths: [https://www.smythstoys.com/fr/fr-fr/marques/pokemon/pokemon-bundle-6-boosters-30eme-anniversaire/p/261769]
+    secours:
+      alertetgo: [https://alertetgo.com/jcc-pokemon-bundle-6-boosters-30e-anniversaire-fr/]
+
+  - id: minitin-30ans
+    nom: Mini Tin 30 ans
+    ean: "0196214146297"
+    plafond: 14.99
+    priorite: chaud
+    mots_cles: ["mini tin 30 ans", "mini tin 30e anniversaire", "mini boite 30 ans"]
+    exclure: [display, lot de 10]
+    urls:
+      joueclub: [https://www.joueclub.fr/pokemon/pokemon-30eme-anniversaire-mini-tin-0196214146297.html]
+      lagranderecre: [https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/mini-tin-pokemon-30e-anniversaire.html]
+      kingjouet: [https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-1034918-pokemon-30-ans-mini-tin-assortiment.htm]
+
+  - id: etb-30ans
+    nom: ETB 30 ans (Coffret Dresseur d'Élite)
+    ean: "0196214144835"
+    plafond: 59.99
+    priorite: chaud
+    mots_cles: ["etb 30 ans", "etb 30e anniversaire", "dresseur d elite 30 ans", "dresseur d elite 30e anniversaire"]
+    exclure: [display, regne delta]
+    urls:
+      micromania: [https://www.micromania.fr/p/coffret-dresseur-d-elite-pokemon-30-ans-162654.html]
+      cdiscount: [https://www.cdiscount.com/juniors/jeux-de-societe-cartes/pokemon-etb-coffret-dresseur-d-elite-30e-anniv/f-120791604-pok196214144835.html]
+      carrefour: [https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835]
+
+  - id: upc-30ans
+    nom: UPC 30 ans Journée / Soirée
+    plafond: 249.99
+    priorite: chaud
+    mots_cles: ["upc 30 ans", "ultra premium 30", "collection ultra premium 30e anniversaire", "upc journee", "upc soiree"]
+    exclure: [display]
+
+  - id: delta-etb
+    nom: Règne Delta (ME06) — ETB
+    ean: "0196214143913"
+    plafond: 59.99
+    priorite: normal
+    mots_cles: ["etb regne delta", "dresseur d elite regne delta", "etb me06"]
+
+  - id: delta-bundle
+    nom: Règne Delta (ME06) — Bundle
+    plafond: 39.99
+    priorite: normal
+    mots_cles: ["bundle regne delta", "bundle me06", "lot de boosters regne delta"]
+
+  - id: delta-tripack
+    nom: Règne Delta (ME06) — Tripack
+    plafond: 19.99
+    priorite: normal
+    mots_cles: ["tripack regne delta", "tri pack regne delta", "3 boosters regne delta"]
+
+  - id: delta-display
+    nom: Règne Delta (ME06) — Display
+    plafond: 229.00
+    priorite: normal
+    mots_cles: ["display regne delta", "display me06", "boite de 36 boosters regne delta"]
+
+  - id: classeur-30ans
+    nom: Collection Classeur 30 ans
+    plafond: 54.99
+    priorite: normal
+    mots_cles: ["classeur 30 ans", "collection classeur 30e anniversaire", "binder 30"]

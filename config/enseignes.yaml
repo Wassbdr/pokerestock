@@ -1,0 +1,59 @@
+# Réglages communs et enseignes.
+# Si une page arrive sans données (rendue en JavaScript), elle est relue
+# automatiquement avec Chromium headless (Playwright), sans technique furtive.
+# Une enseigne qui bloque n'est pas désactivée à la main : l'appli le détecte,
+# la marque « illisible », te prévient une fois, puis ne la re-teste qu'une fois
+# toutes les `retest_bloque_s` secondes.
+
+reglages:
+  user_agent: "PokeRestockPerso/0.1 (usage personnel non commercial; +https://github.com/Wassbdr/pokerestock)"
+  intervalle_min_s: 300      # jamais deux visites d'un même site à moins de 5 min
+  alea_max_s: 120            # + délai aléatoire de 0 à 2 min
+  pages_par_visite: 1        # pages lues par site et par visite
+  retest_bloque_s: 86400     # site bloquant : un essai par jour
+  decouverte_toutes_les_s: 7200
+  respecter_robots: true
+  marge_plafond_eur: 10      # alerte jusqu'à plafond + 10 € (modifiable par produit avec « marge: »)
+
+enseignes:
+  joueclub:      {nom: JouéClub,         adaptateur: proximis}
+  lagranderecre: {nom: La Grande Récré,  adaptateur: proximis}
+  amazon:
+    nom: Amazon.fr
+    adaptateur: amazon
+    vendeurs_officiels: [Amazon]
+    recherche: "https://www.amazon.fr/s?k={q}"
+  # Audit 07/10/2026 : bloquées (403 / Imperva / Cloudflare). Laissées en
+  # adaptateur générique : si un jour la page redevient lisible, ça marchera seul.
+  smyths:        {nom: Smyths Toys, adaptateur: jsonld}
+  fnac:          {nom: Fnac,        adaptateur: jsonld, vendeurs_officiels: [Fnac]}
+  kingjouet:     {nom: King Jouet,  adaptateur: jsonld}
+  micromania:    {nom: Micromania,  adaptateur: jsonld}
+  cdiscount:     {nom: Cdiscount,   adaptateur: jsonld, vendeurs_officiels: [Cdiscount]}
+  carrefour:     {nom: Carrefour,   adaptateur: jsonld}
+  # E.Leclerc : la fiche d'un produit est https://www.e.leclerc/fp/<EAN> (JSON-LD
+  # rendu côté serveur, lisible sans navigateur). 404 = pas encore au catalogue.
+  # La recherche est interdite par robots.txt : on ne l'utilise pas.
+  # Leclerc est une marketplace : le vendeur n'est pas garanti (« non vérifié »).
+  leclerc:
+    nom: E.Leclerc
+    adaptateur: jsonld
+    fiche_ean: "https://www.e.leclerc/fp/{ean}"
+  # Auchan : microdata schema.org + « Vendu par … ». L'EAN ne trouve rien : on
+  # cherche par mots-clés.
+  auchan:
+    nom: Auchan
+    adaptateur: auchan
+    vendeurs_officiels: [Auchan]
+    recherche: "https://www.auchan.fr/recherche?text={q}"
+    recherche_par: mots_cles
+  # Cultura : DataDome bloque aussi le navigateur headless (audit 07/10/2026).
+  cultura:       {nom: Cultura,     adaptateur: navigateur}
+
+secours:
+  dealabs:
+    url: "https://www.dealabs.com/search?q=pokemon"
+  crocodeal:
+    flux: "https://lecrocodeal.com/feed/"
+  alertetgo:
+    flux: "https://alertetgo.com/feed/"
