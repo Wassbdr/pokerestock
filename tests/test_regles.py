@@ -40,3 +40,10 @@ def test_correspondance_mots_cles():
     tin = Produit(id="t", nom="Tin", plafond=15, mots_cles=["mini tin 30 ans"], exclure=["tin"])
     assert not tin.correspond("Mini Tin 30 ans")
     assert Produit(id="x", nom="x", plafond=1, mots_cles=["destination"], exclure=["tin"]).correspond("destination")
+
+
+def test_ordinaux_harmonises():
+    tin = Produit(id="t", nom="Tin", plafond=15, mots_cles=["mini tin 30e anniversaire"])
+    assert tin.correspond("pokemon 30eme anniversaire mini tin")
+    assert tin.correspond("Mini Tin Pokémon 30ᵉ Anniversaire")
+    assert tin.correspond("mini-tin-30ieme-anniversaire")

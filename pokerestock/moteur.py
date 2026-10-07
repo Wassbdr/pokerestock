@@ -10,10 +10,13 @@ from __future__ import annotations
 
 import logging
 import random
+import re
 import time
 from collections import defaultdict
 from dataclasses import dataclass
 from typing import Callable
+
+import xml.etree.ElementTree as ET
 
 import requests
 
@@ -169,6 +172,17 @@ class Moteur:
                     )
             for url in p.secours.get("alertetgo", []):
                 t.append(Tache(f"secours|alertetgo|{url}", url, poids, _lier(self.secours_alertetgo, url), SECOURS_INTERVALLE_S))
+        for ens, cfg in self.config.enseignes.items():
+            if cfg.get("sitemap_index"):
+                t.append(
+                    Tache(
+                        f"sitemap|{ens}",
+                        cfg["sitemap_index"],
+                        0.8,
+                        _lier(self.decouvrir_sitemap, ens),
+                        cfg.get("sitemap_toutes_les_s", 3600),
+                    )
+                )
         s = self.config.secours
         if "dealabs" in s:
             t.append(Tache("secours|dealabs", s["dealabs"]["url"], 1.5, _lier(self.secours_dealabs, s["dealabs"]["url"]), SECOURS_INTERVALLE_S))
@@ -303,6 +317,12 @@ class Moteur:
             "detail": lec.detail,
             "verifie": lec.horodatage,
             "depuis": lec.horodatage if not ancien or ancien.get("etat") != final else ancien.get("depuis"),
+            # Dernier état réellement lu (survit aux périodes illisibles).
+            "dernier_lisible": (
+                {"etat": str(final), "heure": lec.horodatage}
+                if final != Etat.ILLISIBLE
+                else (ancien or {}).get("dernier_lisible")
+            ),
         }
         return lec
 
@@ -342,6 +362,87 @@ class Moteur:
                 )
             )
 
+    def decouvrir_sitemap(self, cle_ens: str) -> None:
+        """Une requête par visite : l'index (une fois par jour) ou le fichier suivant."""
+        cfg = self.config.enseigne(cle_ens)
+        nom = cfg.get("nom", cle_ens)
+        st = self.memoire.sitemaps.setdefault(cle_ens, {"liste": [], "lu": 0, "i": 0})
+        try:
+            if not st["liste"] or self.horloge() - st["lu"] > 86400:
+                rep = self.client.get(cfg["sitemap_index"])
+                filtre = cfg.get("sitemap_filtre", "")
+                st["liste"] = [u for u in sources.locs_sitemap(rep.texte) if filtre in u]
+                st["lu"], st["i"] = self.horloge(), 0
+                log.info("%s : %d sitemap(s) produits", nom, len(st["liste"]))
+                return
+            url = st["liste"][st["i"] % len(st["liste"])]
+            st["i"] = (st["i"] + 1) % len(st["liste"])
+            rep = self.client.get(url)
+        except Bloque as e:
+            self._source(domaine(cfg["sitemap_index"]), nom, True, f"sitemap : {e}")
+            return
+        except (requests.RequestException, ET.ParseError) as e:
+            log.warning("sitemap %s illisible : %s", nom, e)
+            return
+        except Exception as e:  # Absente…
+            log.warning("sitemap %s : %s", nom, e)
+            return
+        urls = sources.locs_sitemap(rep.texte)
+        log.info("%s : %d URL(s) dans %s", nom, len(urls), url.rsplit("/", 1)[-1])
+        rattachees: set[str] = set()
+        for p in self.config.produits:
+            connues = set(p.urls.get(cle_ens, [])) | set(self.memoire.decouvertes.get(p.id, {}).get(cle_ens, []))
+            for u in urls:
+                if u in connues or not p.correspond(u.rsplit("/", 1)[-1].replace("-", " ").replace(".html", "")):
+                    continue
+                self.memoire.decouvertes.setdefault(p.id, {}).setdefault(cle_ens, []).append(u)
+                connues.add(u)
+                rattachees.add(u)
+                self._alerter(
+                    Alerte(
+                        type="nouvelle_fiche",
+                        titre=f"NOUVELLE FICHE : {p.nom}",
+                        message=f"{nom} (sitemap) · ajoutée à la surveillance, état et prix au prochain passage.",
+                        url=u,
+                        chaud=p.chaud,
+                        produit=p.nom,
+                        enseigne=nom,
+                    )
+                )
+        self._veille_ean(cle_ens, nom, url, urls, rattachees)
+
+    def _veille_ean(self, cle_ens: str, nom: str, fichier: str, urls: list[str], rattachees: set[str]) -> None:
+        """Toute nouvelle fiche dont l'URL porte le préfixe EAN surveillé (0196214 =
+        The Pokémon Company) : alerte « nouveau produit JCC », même hors de ta liste.
+        Première lecture d'un fichier sitemap : mémorisation sans alerte."""
+        prefixe = self.config.reglages.get("veille_prefixe_ean")
+        if not prefixe:
+            return
+        vues = self.memoire.veille.setdefault(cle_ens, [])
+        deja = set(vues)
+        cle_init = f"sitemap:{fichier}"
+        premiere = cle_init not in self.memoire.sources_initialisees
+        motif = re.compile(rf"(?<!\d){re.escape(prefixe)}\d{{{13 - len(prefixe)}}}(?!\d)")
+        for u in urls:
+            if u in deja or not motif.search(u.rsplit("/", 1)[-1]):
+                continue
+            vues.append(u)
+            deja.add(u)
+            if premiere or u in rattachees:
+                continue
+            slug = re.sub(r"[-_]+", " ", u.rsplit("/", 1)[-1].rsplit(".", 1)[0])
+            self._alerter(
+                Alerte(
+                    type="nouvelle_fiche",
+                    titre=f"NOUVEAU PRODUIT JCC chez {nom}",
+                    message=f"{slug}\nPas dans ta liste : ajoute-le à config/produits.yaml s'il t'intéresse.",
+                    url=u,
+                    enseigne=nom,
+                )
+            )
+        if premiere:
+            self.memoire.sources_initialisees.append(cle_init)
+
     # ---------------------------------------------------------------- secours
     def _lire_source(self, nom: str, url: str) -> str | None:
         try:
@@ -364,13 +465,21 @@ class Moteur:
         # Une fiche lue directement et lisible fait foi : on ignore l'agrégateur
         # (Alerte&Go affichait « en stock » une fiche Amazon « sur invitation »).
         lues_directement = {f["url"] for f in self.memoire.fiches.values() if f["etat"] != Etat.ILLISIBLE}
+        # Fiches connues « sur invitation » : un agrégateur qui les dit « en stock » se trompe.
+        sur_invitation = {
+            f["url"] for f in self.memoire.fiches.values() if (f.get("dernier_lisible") or {}).get("etat") == Etat.INVITATION
+        }
         for s in signaux:
             cle = f"{s.source}|{s.id}"
             avant = self.memoire.signaux.get(cle)
             for p in self.config.produits:
                 if not p.correspond(s.titre):
                     continue
-                qualifie = regles.signal_qualifie(p, s.prix, s.disponible) and s.url not in lues_directement
+                qualifie = (
+                    regles.signal_qualifie(p, s.prix, s.disponible)
+                    and s.url not in lues_directement
+                    and s.url not in sur_invitation
+                )
                 if qualifie and not premiere and not (avant and avant.get("qualifie")):
                     origine = NOMS_SECOURS.get(s.source, s.source)
                     self._alerter(
@@ -378,7 +487,8 @@ class Moteur:
                             type="signal_secours",
                             titre=f"SIGNAL {origine.upper()} : {p.nom}",
                             message=f"{s.titre}\n{(s.marchand + ' · ') if s.marchand else ''}{euros(s.prix)} "
-                            f"({plafond_txt(p)}). Source indirecte : vérifie sur le site.",
+                            f"({plafond_txt(p)}). Source indirecte : vérifie sur le site."
+                            + (" Amazon : peut être « sur invitation »." if "amazon." in s.url else ""),
                             url=s.url,
                             chaud=p.chaud,
                             produit=p.nom,

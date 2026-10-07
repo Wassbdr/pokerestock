@@ -13,11 +13,22 @@ reglages:
   retest_bloque_s: 86400     # site bloquant : un essai par jour
   decouverte_toutes_les_s: 7200
   respecter_robots: true
+  veille_prefixe_ean: "0196214"   # The Pokémon Company : alerte pour toute nouvelle fiche JCC dans les sitemaps
   marge_plafond_eur: 10      # alerte jusqu'à plafond + 10 € (modifiable par produit avec « marge: »)
 
 enseignes:
-  joueclub:      {nom: JouéClub,         adaptateur: proximis}
-  lagranderecre: {nom: La Grande Récré,  adaptateur: proximis}
+  # JouéClub / La Grande Récré : l'EAN figure dans l'URL des fiches. Leur sitemap
+  # (déclaré dans robots.txt) sert à détecter automatiquement les nouvelles fiches.
+  joueclub:
+    nom: JouéClub
+    adaptateur: proximis
+    sitemap_index: "https://www.joueclub.fr/Assets/Rbs/Seo/sitemap-index.xml"
+    sitemap_filtre: Catalog_Product
+  lagranderecre:
+    nom: La Grande Récré
+    adaptateur: proximis
+    sitemap_index: "https://www.lagranderecre.fr/Assets/Rbs/Seo/sitemap-index.xml"
+    sitemap_filtre: Catalog_Product
   amazon:
     nom: Amazon.fr
     adaptateur: amazon
@@ -52,7 +63,9 @@ enseignes:
 
 secours:
   dealabs:
-    url: "https://www.dealabs.com/search?q=pokemon"
+    # Page du groupe « pokemon » : triée par nouveauté (la recherche est triée par
+    # pertinence et ne montre que de vieux deals).
+    url: "https://www.dealabs.com/groupe/pokemon"
   crocodeal:
     flux: "https://lecrocodeal.com/feed/"
   alertetgo:

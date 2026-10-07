@@ -266,3 +266,85 @@ def test_page_rendue_en_js_relue_avec_le_navigateur(tmp_path):
     assert m.navigateur.charges == [url]
     assert [a.type for a in notif.envoyees] == ["restock"]
     assert mem.illisibles == {}
+
+
+def test_agregateur_ne_contredit_pas_une_invitation_connue(tmp_path):
+    # Amazon lu « sur invitation », puis captcha (illisible) : Alerte&Go qui dit « en stock » est ignoré.
+    amazon = "https://www.amazon.fr/dp/B0H8T1LY94"
+    ag = "https://alertetgo.com/bundle/"
+    produits = [
+        Produit(id="b", nom="Bundle 30 ans", plafond=39.99, mots_cles=["bundle 30e anniversaire"], urls={"amazon": [amazon]}, secours={"alertetgo": [ag]})
+    ]
+    pages = {amazon: (200, page("amazon/invitation.html"))}
+    m, mem, notif, h, client = monter(tmp_path, pages, produits=produits, enseignes={"amazon": {"nom": "Amazon.fr", "adaptateur": "amazon"}})
+    m.passage()
+    client.pages[amazon] = (200, page("amazon/captcha.html"))
+    client.pages[ag] = (200, page("secours/alertetgo.html"))
+    h.t += 600
+    m.passage()
+    fiche = mem.fiches[f"b|amazon|{amazon}"]
+    assert fiche["etat"] == "illisible" and fiche["dernier_lisible"]["etat"] == "invitation"
+    assert [a.type for a in notif.envoyees] == ["restock", "illisible"]
+
+
+def test_signal_amazon_d_agregateur_mentionne_l_invitation(tmp_path):
+    ag = "https://alertetgo.com/bundle/"
+    produits = [Produit(id="b", nom="Bundle 30 ans", plafond=39.99, mots_cles=["bundle 30e anniversaire"], secours={"alertetgo": [ag]})]
+    m, mem, notif, h, client = monter(tmp_path, {ag: (200, page("secours/alertetgo.html"))}, produits=produits)
+    m.passage()
+    assert [a.type for a in notif.envoyees] == ["signal_secours"]
+    assert "sur invitation" in notif.envoyees[0].message
+
+
+def test_decouverte_par_sitemap(tmp_path):
+    index = "https://www.joueclub.fr/sitemap-index.xml"
+    sm = "https://www.joueclub.fr/Rbs_Catalog_Product.1.xml"
+    nouvelle = "https://www.joueclub.fr/pokemon/pokemon-etb-regne-delta-0196214143913.html"
+    pages = {
+        index: (200, f'<?xml version="1.0"?><sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>{sm}</loc></sitemap><sitemap><loc>https://www.joueclub.fr/Rbs_Store.1.xml</loc></sitemap></sitemapindex>'),
+        sm: (200, f'<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>{JC}</loc></url><url><loc>{nouvelle}</loc></url><url><loc>https://www.joueclub.fr/lego/x-123.html</loc></url></urlset>'),
+        nouvelle: (200, page("proximis/joueclub_en_stock.html")),
+    }
+    produits = [
+        Produit(id="tin", nom="Tin", plafond=99, urls={"joueclub": [JC]}),
+        Produit(id="delta", nom="ETB Règne Delta", plafond=59.99, ean="0196214143913", mots_cles=["etb regne delta"]),
+    ]
+    enseignes = {"joueclub": {"nom": "JouéClub", "adaptateur": "proximis", "sitemap_index": index, "sitemap_filtre": "Catalog_Product"}}
+    m, mem, notif, h, client = monter(tmp_path, pages, produits=produits, enseignes=enseignes)
+    m.passage()  # la fiche connue d'abord (jamais lue, poids plus fort)
+    for _ in range(4):
+        h.t += 3700
+        m.passage()
+    assert index in client.requetes and sm in client.requetes
+    assert mem.sitemaps["joueclub"]["liste"] == [sm]
+    assert mem.decouvertes["delta"]["joueclub"] == [nouvelle]
+    types = [a.type for a in notif.envoyees]
+    assert types.count("nouvelle_fiche") == 1 and "restock" in types  # puis lue et en stock
+
+
+def test_veille_prefixe_ean_premiere_lecture_muette(tmp_path):
+    index = "https://www.joueclub.fr/sitemap-index.xml"
+    sm = "https://www.joueclub.fr/Rbs_Catalog_Product.1.xml"
+
+    def urlset(*urls):
+        return '<?xml version="1.0"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>"
+
+    ancien = "https://www.joueclub.fr/pokemon/pokemon-deck-0196214000001.html"
+    nouveau = "https://www.joueclub.fr/pokemon/pokemon-coffret-premium-0196214999999.html"
+    autre = "https://www.joueclub.fr/lego/lego-ville-5702017161123.html"
+    pages = {
+        index: (200, f'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>{sm}</loc></sitemap></sitemapindex>'),
+        sm: (200, urlset(ancien, autre)),
+    }
+    enseignes = {"joueclub": {"nom": "JouéClub", "sitemap_index": index, "sitemap_filtre": "Catalog_Product"}}
+    m, mem, notif, h, client = monter(tmp_path, pages, produits=[Produit(id="x", nom="x", plafond=1)], enseignes=enseignes)
+    m.config.reglages["veille_prefixe_ean"] = "0196214"
+    m.passage()  # index
+    h.t += 3700
+    m.passage()  # sitemap, première lecture : rien
+    assert notif.envoyees == [] and mem.veille["joueclub"] == [ancien]
+    client.pages[sm] = (200, urlset(ancien, nouveau, autre))
+    h.t += 3700
+    m.passage()
+    assert [(a.type, a.url) for a in notif.envoyees] == [("nouvelle_fiche", nouveau)]
+    assert "coffret premium" in notif.envoyees[0].message

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 import unicodedata
 from dataclasses import dataclass, field
 from datetime import datetime
@@ -96,6 +97,8 @@ def normaliser(texte: str) -> str:
     """Minuscules, sans accents ni ponctuation : « 30ᵉ Anniversaire » -> « 30e anniversaire »."""
     t = unicodedata.normalize("NFKD", texte).encode("ascii", "ignore").decode()
     t = "".join(c if c.isalnum() else " " for c in t.lower())
+    # Ordinaux : « 30ème », « 30eme », « 30ieme », « 30e » -> « 30e »
+    t = re.sub(r"\b(\d+)(?:ieme|eme|e)\b", r"\1e", t)
     return " ".join(t.split())
 
 

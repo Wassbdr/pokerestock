@@ -25,7 +25,7 @@ ou qu'une nouvelle fiche produit apparaît. **Elle n'achète jamais rien** : tu 
 
 | Enseigne | Verdict | Comment |
 |---|---|---|
-| JouéClub | ✅ lisible | JSON-LD schema.org (prix + disponibilité) |
+| JouéClub | ✅ lisible | JSON-LD schema.org (prix + disponibilité). Nouvelles fiches détectées via le sitemap (EAN dans l'URL) |
 | La Grande Récré | ✅ lisible | même plateforme que JouéClub |
 | E.Leclerc | ✅ lisible | fiche `https://www.e.leclerc/fp/<EAN>`, JSON-LD. Les produits 30 ans n'y sont pas encore (404 = surveillé comme « rupture », alerte dès l'apparition). Recherche interdite par robots.txt, donc non utilisée. Marketplace : vendeur « non vérifié » |
 | Auchan | ✅ lisible | microdata schema.org + « Vendu par Auchan ». Découverte par recherche de mots-clés |
@@ -39,8 +39,12 @@ ou qu'une nouvelle fiche produit apparaît. **Elle n'achète jamais rien** : tu 
 | Carrefour | ❌ illisible | challenge Cloudflare |
 | Boutique Asmodée | — | aucune boutique Pokémon en ligne trouvée |
 
+**Veille « nouveau produit JCC »** : toute nouvelle fiche des sitemaps JouéClub / La Grande Récré dont
+l'EAN commence par `0196214` (préfixe de The Pokémon Company) déclenche une alerte, même si le produit
+n'est pas dans ta liste : c'est ainsi qu'apparaîtront les UPC, les produits Règne Delta et les futures extensions.
+
 **Sources de secours** (couvrent indirectement les enseignes illisibles, avec quelques minutes de retard) :
-recherche **Dealabs**, flux RSS **Le CrocoDeal** et **Alerte&Go**, fiches produit Alerte&Go.
+page du groupe Pokémon de **Dealabs** (triée par nouveauté), flux RSS **Le CrocoDeal** et **Alerte&Go**, fiches produit Alerte&Go.
 Une alerte de secours dit toujours « source indirecte : vérifie sur le site ». Si une fiche est déjà lue
 directement (ex. Amazon), elle fait foi et l'agrégateur est ignoré.
 
@@ -115,7 +119,8 @@ puis l'icône crayon, puis « Commit changes ».
 
 - `mots_cles` : chaque phrase est un ensemble de mots qui doivent **tous** apparaître (accents et majuscules ignorés).
   Ils servent à rattacher une annonce Dealabs, un article CrocoDeal ou une fiche découverte à ce produit.
-- Une fiche trouvée par la **découverte** (recherche Amazon ou Auchan) est ajoutée à la surveillance
+- Une fiche trouvée par la **découverte** (sitemaps JouéClub/La Grande Récré par EAN ou mots du lien,
+  recherche Amazon ou Auchan) est ajoutée à la surveillance
   automatiquement, et tu reçois une alerte « NOUVELLE FICHE » si son prix est sous ton plafond + marge.
 
 ## Ajouter une enseigne
@@ -133,6 +138,8 @@ puis l'icône crayon, puis « Commit changes ».
      vendeurs_officiels: [Mon Enseigne]   # facultatif : sinon « marketplace »
      recherche: "https://www.exemple.fr/search?q={q}"   # facultatif, pour la découverte
      fiche_ean: "https://www.exemple.fr/p/{ean}"         # facultatif, si l'URL se déduit de l'EAN
+     sitemap_index: "https://www.exemple.fr/sitemap.xml" # facultatif : découverte via le sitemap
+     sitemap_filtre: product                             # garde les sous-sitemaps dont l'URL contient ce texte
    ```
 3. Ajoute ses URLs dans `produits.yaml`.
 4. Si le site a une structure particulière, crée un adaptateur dans `pokerestock/adapters/`

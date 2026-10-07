@@ -64,6 +64,12 @@ def _prix_titre(titre: str) -> str | None:
     return m.group(0) if m else None
 
 
+def locs_sitemap(xml: str) -> list[str]:
+    """URLs <loc> d'un sitemap ou d'un index de sitemaps."""
+    racine = ET.fromstring(xml.encode() if isinstance(xml, str) else xml)
+    return [e.text.strip() for e in racine.iter() if e.tag.endswith("loc") and e.text]
+
+
 def nettoyer_lien(url: str) -> str:
     """Retire les paramètres d'affiliation (tag=…, linkCode=…) des liens Amazon."""
     p = urlsplit(url)

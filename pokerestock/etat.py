@@ -12,7 +12,9 @@ VIDE = {
     "robots": {},  # domaine -> {"texte", "lu"}
     "taches": {},  # clé de tâche -> ts de dernière exécution
     "fiches": {},  # "produit|enseigne|url" -> dernier état connu
-    "decouvertes": {},  # produit -> enseigne -> [urls trouvées par la recherche]
+    "decouvertes": {},
+    "sitemaps": {},
+    "veille": {},  # enseigne -> [URLs déjà vues portant le préfixe EAN surveillé]  # enseigne -> {"liste": [urls], "lu": ts de l'index, "i": prochain fichier}  # produit -> enseigne -> [urls trouvées par la recherche]
     "signaux": {},  # "source|id" -> {"qualifie": bool, "vu": ts}
     "sources_initialisees": [],  # sources de secours déjà lues une première fois
     "illisibles": {},  # domaine -> {"depuis", "raison", "enseigne"}
