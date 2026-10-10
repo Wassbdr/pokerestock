@@ -1,0 +1,738 @@
+{
+ "decouvertes": {
+  "bundle-30ans": {
+   "auchan": []
+  },
+  "classeur-30ans": {
+   "amazon": [],
+   "auchan": []
+  },
+  "delta-bundle": {
+   "amazon": [],
+   "auchan": []
+  },
+  "delta-display": {
+   "auchan": []
+  },
+  "delta-etb": {
+   "auchan": []
+  },
+  "delta-tripack": {
+   "auchan": []
+  },
+  "etb-30ans": {
+   "auchan": []
+  },
+  "minitin-30ans": {
+   "auchan": []
+  },
+  "upc-30ans": {
+   "amazon": [],
+   "auchan": []
+  }
+ },
+ "dernier_passage": "2026-10-10T23:49:19+02:00",
+ "dernier_resume": "2026-10-10",
+ "domaines": {
+  "alertetgo.com": {
+   "derniere_visite": 1791668959.6550379,
+   "prochaine_visite": 1791669346.3963625
+  },
+  "lecrocodeal.com": {
+   "derniere_visite": 1791640671.0335424,
+   "prochaine_visite": 1791727071.0335424
+  },
+  "www.amazon.fr": {
+   "derniere_visite": 1791617572.0618038,
+   "prochaine_visite": 1791703972.0618038
+  },
+  "www.auchan.fr": {
+   "derniere_visite": 1791668943.0695453,
+   "prochaine_visite": 1791669336.707237
+  },
+  "www.carrefour.fr": {
+   "derniere_visite": 1791640661.2718544,
+   "prochaine_visite": 1791727061.2718544
+  },
+  "www.cdiscount.com": {
+   "derniere_visite": 1791640662.7289815,
+   "prochaine_visite": 1791727062.7289815
+  },
+  "www.dealabs.com": {
+   "derniere_visite": 1791668957.4415324,
+   "prochaine_visite": 1791669370.3213177
+  },
+  "www.e.leclerc": {
+   "derniere_visite": 1791668957.0542805,
+   "prochaine_visite": 1791669368.2352033
+  },
+  "www.joueclub.fr": {
+   "derniere_visite": 1791668952.2529223,
+   "prochaine_visite": 1791669335.9112146
+  },
+  "www.king-jouet.com": {
+   "derniere_visite": 1791640662.3898134,
+   "prochaine_visite": 1791727062.3898134
+  },
+  "www.lagranderecre.fr": {
+   "derniere_visite": 1791668956.737019,
+   "prochaine_visite": 1791669347.6845655
+  },
+  "www.micromania.fr": {
+   "derniere_visite": 1791640668.0496502,
+   "prochaine_visite": 1791727068.0496502
+  },
+  "www.smythstoys.com": {
+   "derniere_visite": 1791640661.1129847,
+   "prochaine_visite": 1791727061.1129847
+  }
+ },
+ "en_attente": [],
+ "fiches": {
+  "bundle-30ans|amazon|https://www.amazon.fr/dp/B0H8T1LY94": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:34:06+02:00",
+   "dernier_lisible": null,
+   "detail": "captcha Amazon (HTTP 200)",
+   "enseigne": "amazon",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "bundle-30ans",
+   "titre": null,
+   "url": "https://www.amazon.fr/dp/B0H8T1LY94",
+   "vendeur": null,
+   "verifie": "2026-10-10T09:32:52+02:00"
+  },
+  "bundle-30ans|joueclub|https://www.joueclub.fr/pokemon/pokemon-bundle-6-boosters-0196214145221.html": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:34:01+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T20:14:50+02:00"
+   },
+   "detail": "",
+   "enseigne": "joueclub",
+   "etat": "rupture",
+   "prix": 41.99,
+   "produit": "bundle-30ans",
+   "titre": "POKEMON - BUNDLE  - 6 BOOSTERS",
+   "url": "https://www.joueclub.fr/pokemon/pokemon-bundle-6-boosters-0196214145221.html",
+   "vendeur": "JouéClub",
+   "verifie": "2026-10-10T20:14:50+02:00"
+  },
+  "bundle-30ans|lagranderecre|https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/-6-boosters-pokemon-30e-anniversaire.html": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:34:02+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T20:14:55+02:00"
+   },
+   "detail": "",
+   "enseigne": "lagranderecre",
+   "etat": "rupture",
+   "prix": 41.99,
+   "produit": "bundle-30ans",
+   "titre": "6 boosters Pokémon 30e Anniversaire",
+   "url": "https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/-6-boosters-pokemon-30e-anniversaire.html",
+   "vendeur": "La Grande Récré",
+   "verifie": "2026-10-10T20:14:55+02:00"
+  },
+  "bundle-30ans|leclerc|https://www.e.leclerc/fp/0196214145221": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:34:01+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T23:49:17+02:00"
+   },
+   "detail": "fiche pas en ligne (HTTP 404)",
+   "enseigne": "leclerc",
+   "etat": "rupture",
+   "prix": null,
+   "produit": "bundle-30ans",
+   "titre": null,
+   "url": "https://www.e.leclerc/fp/0196214145221",
+   "vendeur": null,
+   "verifie": "2026-10-10T23:49:17+02:00"
+  },
+  "bundle-30ans|smyths|https://www.smythstoys.com/fr/fr-fr/marques/pokemon/pokemon-bundle-6-boosters-30eme-anniversaire/p/261769": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:33:59+02:00",
+   "dernier_lisible": null,
+   "detail": "Imperva/Incapsula (HTTP 200)",
+   "enseigne": "smyths",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "bundle-30ans",
+   "titre": null,
+   "url": "https://www.smythstoys.com/fr/fr-fr/marques/pokemon/pokemon-bundle-6-boosters-30eme-anniversaire/p/261769",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:41+02:00"
+  },
+  "delta-etb|leclerc|https://www.e.leclerc/fp/0196214143913": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T16:46:46+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T15:57:41+02:00"
+   },
+   "detail": "fiche pas en ligne (HTTP 404)",
+   "enseigne": "leclerc",
+   "etat": "rupture",
+   "prix": null,
+   "produit": "delta-etb",
+   "titre": null,
+   "url": "https://www.e.leclerc/fp/0196214143913",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:41+02:00"
+  },
+  "etb-30ans|carrefour|https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:33:59+02:00",
+   "dernier_lisible": null,
+   "detail": "challenge Cloudflare (HTTP 403)",
+   "enseigne": "carrefour",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "etb-30ans",
+   "titre": null,
+   "url": "https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:41+02:00"
+  },
+  "etb-30ans|cdiscount|https://www.cdiscount.com/juniors/jeux-de-societe-cartes/pokemon-etb-coffret-dresseur-d-elite-30e-anniv/f-120791604-pok196214144835.html": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:34:03+02:00",
+   "dernier_lisible": null,
+   "detail": "challenge Cloudflare (HTTP 403)",
+   "enseigne": "cdiscount",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "etb-30ans",
+   "titre": null,
+   "url": "https://www.cdiscount.com/juniors/jeux-de-societe-cartes/pokemon-etb-coffret-dresseur-d-elite-30e-anniv/f-120791604-pok196214144835.html",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:42+02:00"
+  },
+  "etb-30ans|leclerc|https://www.e.leclerc/fp/0196214144835": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T09:42:22+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T20:14:54+02:00"
+   },
+   "detail": "fiche pas en ligne (HTTP 404)",
+   "enseigne": "leclerc",
+   "etat": "rupture",
+   "prix": null,
+   "produit": "etb-30ans",
+   "titre": null,
+   "url": "https://www.e.leclerc/fp/0196214144835",
+   "vendeur": null,
+   "verifie": "2026-10-10T20:14:54+02:00"
+  },
+  "etb-30ans|micromania|https://www.micromania.fr/p/coffret-dresseur-d-elite-pokemon-30-ans-162654.html": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:34:03+02:00",
+   "dernier_lisible": null,
+   "detail": "Imperva/Incapsula (HTTP 200)",
+   "enseigne": "micromania",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "etb-30ans",
+   "titre": null,
+   "url": "https://www.micromania.fr/p/coffret-dresseur-d-elite-pokemon-30-ans-162654.html",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:48+02:00"
+  },
+  "minitin-30ans|joueclub|https://www.joueclub.fr/pokemon/pokemon-30eme-anniversaire-mini-tin-0196214146297.html": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:44:01+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T15:57:48+02:00"
+   },
+   "detail": "",
+   "enseigne": "joueclub",
+   "etat": "rupture",
+   "prix": 16.99,
+   "produit": "minitin-30ans",
+   "titre": "POKEMON - 30EME ANNIVERSAIRE - MINI TIN",
+   "url": "https://www.joueclub.fr/pokemon/pokemon-30eme-anniversaire-mini-tin-0196214146297.html",
+   "vendeur": "JouéClub",
+   "verifie": "2026-10-10T15:57:48+02:00"
+  },
+  "minitin-30ans|kingjouet|https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-1034918-pokemon-30-ans-mini-tin-assortiment.htm": {
+   "brut": "illisible",
+   "depuis": "2026-10-07T03:33:58+02:00",
+   "dernier_lisible": null,
+   "detail": "DataDome (HTTP 403)",
+   "enseigne": "kingjouet",
+   "etat": "illisible",
+   "prix": null,
+   "produit": "minitin-30ans",
+   "titre": null,
+   "url": "https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-1034918-pokemon-30-ans-mini-tin-assortiment.htm",
+   "vendeur": null,
+   "verifie": "2026-10-10T15:57:42+02:00"
+  },
+  "minitin-30ans|lagranderecre|https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/mini-tin-pokemon-30e-anniversaire.html": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:44:02+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T15:57:49+02:00"
+   },
+   "detail": "",
+   "enseigne": "lagranderecre",
+   "etat": "rupture",
+   "prix": 16.99,
+   "produit": "minitin-30ans",
+   "titre": "Mini Tin Pokémon 30e Anniversaire",
+   "url": "https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/mini-tin-pokemon-30e-anniversaire.html",
+   "vendeur": "La Grande Récré",
+   "verifie": "2026-10-10T15:57:49+02:00"
+  },
+  "minitin-30ans|leclerc|https://www.e.leclerc/fp/0196214146297": {
+   "brut": "rupture",
+   "depuis": "2026-10-07T03:44:02+02:00",
+   "dernier_lisible": {
+    "etat": "rupture",
+    "heure": "2026-10-10T09:32:50+02:00"
+   },
+   "detail": "0 offre(s)",
+   "enseigne": "leclerc",
+   "etat": "rupture",
+   "prix": null,
+   "produit": "minitin-30ans",
+   "titre": "Pokémon 30A : Mini Tin (modèle aléatoire)",
+   "url": "https://www.e.leclerc/fp/0196214146297",
+   "vendeur": null,
+   "verifie": "2026-10-10T09:32:50+02:00"
+  }
+ },
+ "illisibles": {
+  "lecrocodeal.com": {
+   "depuis": "2026-10-07T03:34:06+02:00",
+   "enseigne": "Le CrocoDeal",
+   "raison": "challenge Cloudflare (HTTP 403)"
+  },
+  "www.amazon.fr": {
+   "depuis": "2026-10-07T03:34:06+02:00",
+   "enseigne": "Amazon.fr",
+   "raison": "captcha Amazon (HTTP 200)"
+  },
+  "www.carrefour.fr": {
+   "depuis": "2026-10-07T03:33:59+02:00",
+   "enseigne": "Carrefour",
+   "raison": "challenge Cloudflare (HTTP 403)"
+  },
+  "www.cdiscount.com": {
+   "depuis": "2026-10-07T03:34:03+02:00",
+   "enseigne": "Cdiscount",
+   "raison": "challenge Cloudflare (HTTP 403)"
+  },
+  "www.king-jouet.com": {
+   "depuis": "2026-10-07T03:33:58+02:00",
+   "enseigne": "King Jouet",
+   "raison": "DataDome (HTTP 403)"
+  },
+  "www.micromania.fr": {
+   "depuis": "2026-10-07T03:34:03+02:00",
+   "enseigne": "Micromania",
+   "raison": "Imperva/Incapsula (HTTP 200)"
+  },
+  "www.smythstoys.com": {
+   "depuis": "2026-10-07T03:33:59+02:00",
+   "enseigne": "Smyths Toys",
+   "raison": "Imperva/Incapsula (HTTP 200)"
+  }
+ },
+ "robots": {
+  "alertetgo.com": {
+   "lu": 1791640670.147963,
+   "texte": "User-agent: *\r\nAllow: /\r\nDisallow: /wp-admin/\r\nAllow: /wp-admin/*.css\r\nAllow: /wp-admin/*.js\r\nAllow: /wp-admin/admin-ajax.php\r\n\r\n# Bloquer les pages inutiles\r\nDisallow: /author/\r\n# â ï¸ IMPORTANT: Ne pas bloquer /page/ car Google a besoin d'accÃ©der Ã  la pagination\r\n# Disallow: /page/  # DÃSACTIVÃ pour permettre l'indexation complÃ¨te\r\nDisallow: /tag/\r\nDisallow: /category/inutile/\r\n\r\n# Bloquer les paramÃ¨tres inutiles (mais permettre l'accÃ¨s au contenu principal)\r\nDisallow: /*?fbclid=\r\nDisallow: /*?utm_source=\r\nDisallow: /*?utm_medium=\r\nDisallow: /*?utm_campaign=\r\nDisallow: /*?gclid=\r\nDisallow: /*?utm_content=\r\n\r\n# Sitemap - IMPORTANT pour l'indexation\r\n# Avec Yoast SEO, soumettre uniquement le sitemap_index.xml qui rÃ©fÃ©rence tous les sous-sitemaps\r\nSitemap: https://alertetgo.com/sitemap_index.xml\r\n# Sitemap lÃ©ger des fiches crÃ©Ã©es rÃ©cemment (30 jours) â prioritÃ© crawl nouveautÃ©s\r\nSitemap: https://alertetgo.com/recent-sitemap.xml\r\n\r\n# Host (pour Yandex uniquement, pas standard mais inoffensif)\r\nHost: alertetgo.com\r\n\r\n# BEGIN alertetgo-brand-popup\r\n# Image du popup : ne pas l'utiliser comme vignette de resultat.\r\nDisallow: /wp-content/uploads/2026/08/bouton-pokemon\r\n# END alertetgo-brand-popup\r\n"
+  },
+  "lecrocodeal.com": {
+   "lu": 1791640671.02502,
+   "texte": "User-agent: *\r\nDisallow: /wp-admin/\r\nDisallow: /wp-login.php\r\nDisallow: /activite\r\nDisallow: /author\r\nDisallow: /membres\r\nDisallow: */trackback\r\nDisallow: /*/comments\r\nDisallow: /go/\r\nDisallow: /visit/\r\nDisallow: /affegg/\r\nDisallow: /category/\r\nDisallow: /*.php$\r\nDisallow: /*.inc$\r\nDisallow: /*.gz\r\nDisallow: /*.cgi\r\nAllow: /*css?*\r\nAllow: /*js?*\r\nAllow: /wp-admin/admin-ajax.php\r\n\r\nSitemap: https://lecrocodeal.com/sitemap.xml"
+  },
+  "www.amazon.fr": {
+   "lu": 1791544945.5537176,
+   "texte": "User-agent: *\nDisallow: */s?k=*&rh=n*p_*p_*p_\nDisallow: /dp/product-availability/\nDisallow: /dp/rate-this-item/\nDisallow: /exec/obidos/account-access-login\nDisallow: /exec/obidos/change-style\nDisallow: /exec/obidos/dt/assoc/handle-buy-box\nDisallow: /exec/obidos/flex-sign-in\nDisallow: /exec/obidos/handle-buy-box\nDisallow: /exec/obidos/refer-a-friend-login\nDisallow: /exec/obidos/subst/associates/join\nDisallow: /exec/obidos/subst/marketplace/sell-your-collection.html\nDisallow: /exec/obidos/subst/marketplace/sell-your-stuff.html\nDisallow: /exec/obidos/subst/partners/friends/access.html\nDisallow: /exec/obidos/tg/cm/member/\nDisallow: /gp/cart\nDisallow: /gp/content-form\nDisallow: /gp/customer-images\nDisallow: /gp/customer-media/upload\nDisallow: /gp/customer-reviews/common/du\nDisallow: /gp/customer-reviews/write-a-review.html\nDisallow: /gp/flex\nDisallow: /gp/gfix\nDisallow: /gp/history\nDisallow: /gp/item-dispatch\nDisallow: /gp/legacy-handle-buy-box.html\nDisallow: /gp/reader\nDisallow: /gp/registry/wishlist/*/reserve\nDisallow: /gp/richpub/listmania/createpipeline\nDisallow: /gp/music/clipserve\nDisallow: /gp/recsradio\nDisallow: /gp/sign-in\nDisallow: /gp/slides/make-money\nDisallow: /gp/structured-ratings/actions/get-experience.html\nDisallow: /gp/twitter/\nDisallow: /gp/vote\nDisallow: /gp/voting/\nDisallow: /gp/yourstore\nDisallow: /ap/signin\nDisallow: /gp/registry/search.html\nDisallow: /gp/orc/rml/\nDisallow: /gp/dmusic/mp3/player\nDisallow: /gp/entity-alert/external\nDisallow: /gp/customer-reviews/dynamic/sims-box\nDisallow: /review/dynamic/sims-box\nDisallow: /gp/redirect.html\nDisallow: /gp/customer-media/actions/delete/\nDisallow: /gp/customer-media/actions/edit-caption/\nDisallow: /gp/dmusic/\nDisallow: /gp/customer-media/product-gallery/B007HCCOD0\nDisallow: /gp/help/customer/display.html?*nodeId=200534000\nDisallow: /gp/feature.html?*docId=1000632623\nDisallow: /gp/aag\nDisallow: /gp/socialmedia/giveaways\nDisallow: /gp/aw/so.html\nDisallow: /gp/pdp/profile/\nDisallow: /gp/product/product-availability\nDisallow: /gp/offer-listing\nDisallow: /dp/twister-update/\nDisallow: /dp/e-mail-friend/\nDisallow: /gp/registry/wishlist/\nDisallow: /wishlist/\nAllow: /wishlist/universal\nAllow: /wishlist/vendor-button\nAllow: /wishlist/get-button\nDisallow: /gp/wishlist/\nAllow: /gp/wishlist/universal\nAllow: /gp/wishlist/vendor-button\nAllow: /gp/wishlist/ipad-install\nDisallow: /registry/wishlist/\nDisallow: /local/ajax/\nDisallow: /gp/rentallist\nDisallow: /gp/video/dvd-rental/settings\nDisallow: /gp/rl/settings\nDisallow: /gp/video/settings\nDisallow: /gp/video/watchlist\nDisallow: /gp/video/library\nDisallow: /gp/profile/\nDisallow: /reviews/iframe\nDisallow: /gp/help/reports/infringement/jquery/handle-notice-submit.html\nDisallow: /gp/help/customer/handler/handle-email-submit.html\nDisallow: /gp/ask-widget/askWidget*\nDisallow: /gp/dmusic/\nAllow: /gp/dmusic/promotions/AmazonMusicUnlimited\nDisallow: /ss/customer-reviews/lighthouse/\nDisallow: /gp/aw/ol/\nDisallow: /gp/promotion/\nDisallow: /hz/leaderboard/top-reviewers/\nDisallow: /hz/leaderboard/hall-of-fame/\nDisallow: /review/top-reviewers/\nDisallow: /review/top-reviewers\nDisallow: /review/hall-of-fame\nDisallow: /reviews/top-reviewers/\nDisallow: /reviews/top-reviewers\nDisallow: /reviews/hall-of-fame\nDisallow: /hz/help/contact/*/message/$\nDisallow: /-/\nAllow: /-/en/\nDisallow: /gp/aw/shoppingAids/\n\nUser-agent: EtaoSpider\nDisallow: /\n\nUser-agent: GPTBot\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-Agent: PerplexityBot\nDisallow: /\n\nUser-agent: Google-Extended\nDisallow: /\n\nUser-agent: GoogleAgent-Mariner\nDisallow: /\n\nUser-agent: GoogleAgent-Shopping\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: meta-externalagent\nDisallow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nUser-agent: Scrapy\nDisallow: /\n\nUser-agent: PetalBot\nDisallow: /\n\nUser-agent: Devin\nDisallow: /\n\nUser-agent: omgili\nDisallow: /\n\nUser-agent: AI2Bot\nDisallow: /\n\nUser-agent: Gemini-Deep-Research\nDisallow: /\n\nUser-agent: PanguBot\nDisallow: /\n\nUser-agent: MistralAI-User\nDisallow: /\n\nUser-agent: Diffbot\nDisallow: /\n\nUser-agent: Sidetrade indexer bot\nDisallow: /\n\nUser-agent: Google-NotebookLM\nDisallow: /\n\nUser-agent: DuckAssistBot\nDisallow: /\n\nUser-agent: Copilot\nDisallow: /\n\nUser-agent: Ai2Bot-Dolma\nDisallow: /\n\nUser-agent: Google-CloudVertexBot\nDisallow: /\n\nUser-agent: meta-externalfetcher\nDisallow: /\n\nUser-agent: iaskspider\nDisallow: /\n\nUser-agent: wpbot\nDisallow: /\n\nUser-agent: aiHitBot\nDisallow: /\n\nUser-agent: cohere-ai\nDisallow: /\n\nUser-agent: FriendlyCrawler\nDisallow: /\n\nUser-agent: img2dataset\nDisallow: /\n\nUser-agent: VelenPublicWebCrawler\nDisallow: /\n\nUser-agent: YouBot\nDisallow: /\n\nUser-agent: Brightbot\nDisallow: /\n\nUser-agent: Claude-User\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: Claude-SearchBot\nDisallow: /\n\nUser-agent: Perplexity-User\nDisallow: /\n\nUser-agent: ISSCyberRiskCrawler\nDisallow: /\n\nUser-agent: CopilotNative\nDisallow: /\n\nUser-agent: CopilotSapphire\nDisallow: /\n\nUser-agent: imgproxy\nDisallow: /\n\nUser-agent: SemrushBot-SWA\nDisallow: /\n\nUser-agent: ChatGPT-User\nDisallow: /\n\nUser-agent: OAI-SearchBot\nDisallow: /\n\nUser-agent: Timpibot\nDisallow: /\n\nUser-agent: Thinkbot\nDisallow: /\n\nUser-agent: AddSearchBot\nDisallow: /\n\nUser-agent: AI2Bot-DeepResearchEval\nDisallow: /\n\nUser-agent: Andibot\nDisallow: /\n\nUser-agent: Anomura\nDisallow: /\n\nUser-agent: atlassian-bot\nDisallow: /\n\nUser-agent: BuddyBot\nDisallow: /\n\nUser-agent: Channel3Bot\nDisallow: /\n\nUser-agent: ChatGLM-Spider\nDisallow: /\n\nUser-agent: Claude-Web\nDisallow: /\n\nUser-agent: Cloudflare-AutoRAG\nDisallow: /\n\nUser-agent: CloudflareBrowserRenderingCrawler\nDisallow: /\n\nUser-agent: cohere-training-data-crawler\nDisallow: /\n\nUser-agent: Cotoyogi\nDisallow: /\n\nUser-agent: Crawl4AI\nDisallow: /\n\nUser-agent: Datenbank Crawler\nDisallow: /\n\nUser-agent: DeepSeekBot\nDisallow: /\n\nUser-agent: Echobot Bot\nDisallow: /\n\nUser-agent: EchoboxBot\nDisallow: /\n\nUser-agent: factset_spyderbot\nDisallow: /\n\nUser-agent: Google-Firebase\nDisallow: /\n\nUser-agent: GoogleOther\nDisallow: /\n\nUser-agent: Grok-DeepSearch\nDisallow: /\n\nUser-agent: GrokBot\nDisallow: /\n\nUser-agent: iAskBot\nDisallow: /\n\nUser-agent: IbouBot\nDisallow: /\n\nUser-agent: ICC-Crawler\nDisallow: /\n\nUser-agent: ImagesiftBot\nDisallow: /\n\nUser-agent: imageSpider\nDisallow: /\n\nUser-agent: Kangaroo Bot\nDisallow: /\n\nUser-agent: KlaviyoAIBot\nDisallow: /\n\nUser-agent: KunatoCrawler\nDisallow: /\n\nUser-agent: laion-huggingface-processor\nDisallow: /\n\nUser-agent: Linguee Bot\nDisallow: /\n\nUser-agent: LinkupBot\nDisallow: /\n\nUser-agent: Manus-User\nDisallow: /\n\nUser-agent: meta-webindexer\nDisallow: /\n\nUser-agent: netEstate Imprint Crawler\nDisallow: /\n\nUser-agent: Panscient\nDisallow: /\n\nUser-agent: panscient.com\nDisallow: /\n\nUser-agent: PhindBot\nDisallow: /\n\nUser-agent: Poggio-Citations\nDisallow: /\n\nUser-agent: QualifiedBot\nDisallow: /\n\nUser-agent: SBIntuitionsBot\nDisallow: /\n\nUser-agent: ShapBot\nDisallow: /\n\nUser-agent: TavilyBot\nDisallow: /\n\nUser-agent: TerraCotta\nDisallow: /\n\nUser-agent: TwinAgent\nDisallow: /\n\nUser-agent: webzio-extended\nDisallow: /\n\nUser-agent: WRTNBot\nDisallow: /\n\nUser-agent: xAI-Grok\nDisallow: /\n\nUser-agent: YaK\nDisallow: /\n\nUser-agent: ZanistaBot\nDisallow: /"
+  },
+  "www.auchan.fr": {
+   "lu": 1791640665.9186482,
+   "texte": "#ROBOTS SPECIFIQUES\r\n\r\nUser-agent: AdsBot-Google\r\nUser-agent: AdsBot-Google-Mobile\r\nUser-agent: AdsBot-Google-Mobile-Apps\r\nUser-agent: Mediapartners-Google\r\nUser-agent: Googlebot-Image\r\nUser-agent: Storebot-Google\r\n\r\nDisallow:\r\n\r\nUser-agent: Sentibot\r\n\r\nDisallow: /\r\n\r\n#RESTE DES ROBOTS D'INDEXATION\r\n\r\nUser-agent: *\r\n\r\n#TRIS\r\n\r\nDisallow: /*sort=*\r\n\r\n#PARAMETRES DIVERS\r\n\r\nDisallow: /*ref=*\r\nDisallow: /*jsessionid=*\r\nDisallow: /*keywords=*\r\nDisallow: /*qt_id=*\r\nDisallow: /*storeReference=*\r\n\r\n#RECHERCHE\r\nDisallow: /recherche*\r\n\r\n#REPERTOIRES DIVERS\r\n\r\nDisallow: /checkout/\r\nDisallow: /client/\r\nDisallow: /secured/\r\nDisallow: /_ui/*/desktop/\r\nDisallow: /fragment/\r\nDisallow: /assets/\r\nDisallow: /fragments/reviews/usefulness-evaluation/\r\nDisallow: /drive/nos-drives/\r\nDisallow: /magasins/votremagasin.storelocator.searchstore.searchmapstore.mapchoice/\r\nDisallow: /achat1/\r\nDisallow: /achat2/\r\nDisallow: /achat3/\r\nDisallow: /achat4/\r\nDisallow: /achat5/\r\nDisallow: /achat6/\r\nDisallow: /achat7/\r\nDisallow: /achat8/\r\nDisallow: /achat9/\r\nDisallow: /creation-compte/\r\nDisallow: /mot-de-passe/\r\nDisallow: /my-account/\r\nDisallow: /simulation/\r\nDisallow: /le-top-des-ventes/\r\nDisallow: /mot-de-passe/\r\nDisallow: /marques/auchan/auchan-courses-du-quotidien/\r\nDisallow: /marques/auchan/auchan-maison-et-loisirs/\r\n\r\n#EXTENSIONS FICHIERS\r\n\r\nDisallow: /*.pdf\r\nDisallow: /*.htm\r\n\r\n#LANDINGS\r\n\r\nDisallow: /landing-edito-*/ep-landing-edito-*\r\n\r\n#PAGES DIVERSES\r\n\r\nDisallow: /test-appelt2smb/e-test-appelt2smb\r\nDisallow: /test-appelt2smb/ep-test-appelt2smb\r\nDisallow: /*/pr-91500342\r\nDisallow: /magasins/*/s*M02\r\nDisallow: /selection-*/ca-*\r\nDisallow: /boutique/*\r\nAllow: /boutique/promos$\r\nDisallow: /cart*consentId*\r\nDisallow: /search-infinite*\r\nDisallow: /auth/silent-check-sso\r\nDisallow: /coupon/config\r\nDisallow: /quotation/config\r\nDisallow: /cart/config\r\nDisallow: /simulation?*\r\nDisallow: /journey*\r\nDisallow: /*/id1/*\r\nDisallow: /wishlist/ajax/*\r\nDisallow: /cart-renderer/cart/loyalty-caution/config\r\nDisallow: /showcase?*\r\nDisallow: /coupon/markups/*\r\nDisallow: /categories/*\r\nDisallow: /programme-fidelite-casino/ep-programme-fidelite-casino\r\nDisallow: /Accueil\r\nDisallow: /reviews?bvaction*\r\nDisallow: /reviews?productId*\r\nDisallow: /offering-contexts*\r\nDisallow: /customer/ajax/userinfo-tracking\r\nDisallow: /search/redirect\r\n\r\n# SITEMAP\r\n\r\nSitemap: https://www.auchan.fr/sitemap.xml"
+  },
+  "www.carrefour.fr": {
+   "lu": 1791640661.165418,
+   "texte": "\n\n# Adsbot Instructions\n# Adsbot Instructions for Store Indexing\nUser-agent: AdsBot-Google-Mobile\nUser-agent: AdsBot-Google\nUser-agent: AdIdxBot\nAllow: /set-store\nAllow: /get-store\nAllow: /g\n\n# All Bots Instructions\nUser-agent: *\n\n# Disallow to Index Store 6 only \nDisallow: /set-store\nDisallow: /get-store\nDisallow: /webview\nDisallow: /g\nDisallow: /b\n\n# Noindex to Index Store 6 only\nNoindex: /set-store\nNoindex: /get-store\nNoindex: /webview\nNoindex: /g\nNoindex: /b"
+  },
+  "www.cdiscount.com": {
+   "lu": 1791640662.6345239,
+   "texte": ""
+  },
+  "www.dealabs.com": {
+   "lu": 1791640670.565128,
+   "texte": "User-agent: *\nAllow: /\nDisallow: /bpn/getRequestPermissionParams\nDisallow: /selection\nDisallow: /assets/js/share/thread-embed.js\nDisallow: /admin\nDisallow: /login\nDisallow: /graphql\nDisallow: /codes-promo/api/*\nDisallow: /codes-promo/loading/*\nDisallow: /codes-promo/m/clickout\nDisallow: /codes-promo/m/click-*\nDisallow: /codes-promo/m/cn-clickout*\nDisallow: /codes-promo/clickout/*\nDisallow: /codes-promo/user/submit\nDisallow: /codes-promo/*?preview\nDisallow: /codes-promo/m/clickout/*\nDisallow: /rest-api/\nDisallow: /*?layout=*\nDisallow: /*&layout=*\nDisallow: /*?hide_local=*\nDisallow: /*&hide_local=*\nDisallow: /*?hide_expired=*\nDisallow: /*&hide_expired=*\nDisallow: /*?priceFrom=*\nDisallow: /*&priceFrom=*\nDisallow: /*?priceTo=*\nDisallow: /*&priceTo=*\nDisallow: /*?sortBy=*\nDisallow: /*&sortBy=*\nDisallow: /*?temperatureFrom=*\nDisallow: /*&temperatureFrom=*\nDisallow: /*?temperatureTo=*\nDisallow: /*&temperatureTo=*\nDisallow: /*?groups=*\nDisallow: /*&groups=*\nDisallow: /*?time_frame=*\nDisallow: /*&time_frame=*\nDisallow: /*?retailers=*\nDisallow: /*&retailers=*\nDisallow: /*?search_fields=*\nDisallow: /*&search_fields=*\nDisallow: /*?threadTypes=*\nDisallow: /*&threadTypes=*\nDisallow: /*?merchant-id=*\nDisallow: /*&merchant-id=*\nDisallow: /wl/*\nDisallow: /visit/\nDisallow: /search\nDisallow: /mercury/out*\n\nUser-agent: ChatGPT-User\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: GPTBot\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: Applebot-Extended\nDisallow: /\n\nUser-agent: Bytespider\nDisallow: /\n\nUser-agent: CCBot\nDisallow: /\n\nUser-agent: ClaudeBot\nDisallow: /\n\nUser-agent: Diffbot\nDisallow: /\n\nUser-agent: FacebookBot\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: Mediapartners-Google\nAllow: /\n\nUser-agent: Google-Extended\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: omgili\nDisallow: /\n\nUser-agent: Amazonbot\nDisallow: /\n\nUser-agent: Applebot\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: PerplexityBot\nDisallow: /\n\nUser-agent: anthropic-ai\nDisallow: /\n\nUser-agent: OAI-SearchBot\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\n\nUser-agent: cohere-ai\nDisallow: /\n\nUser-agent: Seekbot\nDisallow: /\n\nUser-agent: Seekr\nDisallow: /\n\nUser-agent: omgilibot\nDisallow: /\n\nUser-agent: FirecrawlAgent\nDisallow: /\n\nUser-agent: Meta-ExternalAgent\nDisallow: /\n\nUser-agent: NovaAct\nDisallow: /\n\nUser-agent: Operator\nDisallow: /\nAllow: /codes-promo/\nDisallow: /codes-promo/*0\nDisallow: /codes-promo/*1\nDisallow: /codes-promo/*2\nDisallow: /codes-promo/*3\nDisallow: /codes-promo/*4\nDisallow: /codes-promo/*5\nDisallow: /codes-promo/*6\nDisallow: /codes-promo/*7\nDisallow: /codes-promo/*8\nDisallow: /codes-promo/*9\nSitemap: https://www.dealabs.com/sitemap/sitemap.xml.gz\nSitemap: https://www.dealabs.com/codes-promo/sitemap.xml\nSitemap: https://www.dealabs.com/magazine/sitemap_index.xml\nSitemap: https://www.dealabs.com/magazine/news-sitemap.xml"
+  },
+  "www.e.leclerc": {
+   "lu": 1791640661.56185,
+   "texte": "Sitemap: https://www.e.leclerc/sitemap/sitemap-index.xml\nUser-agent: *\nDisallow: /recherche\nDisallow: /auth\nDisallow: /catalogue\nDisallow: */offers\nDisallow: /order/\nDisallow: /*?code\nDisallow: /of/\nDisallow: /api/rest/mabaya-api/\nDisallow: /api/rest/oms-order-api/cart/\nDisallow: /assets/config/app.json\nDisallow: /cart\nDisallow: /*property_facet\nDisallow: /*price_min=\nDisallow: /*seller_list=\nDisallow: /*availability_status=\nDisallow: /*sortOrder=\nDisallow: /*sortKey=\nDisallow: /*rating_list=\nDisallow: /*state_code=\nDisallow: /*promotion_type=\nDisallow: /*type_de_produit=\nDisallow: /lp/*page=\n"
+  },
+  "www.joueclub.fr": {
+   "lu": 1791640668.312647,
+   "texte": "User-agent: * \nDisallow: /_service.php/\nDisallow: /admin.php/\nDisallow: /ajax.php/\nDisallow: /ajax.V1.php/\nDisallow: /ajaxPreview.php/\nDisallow: /assistedCheckoutAPI.php/\nDisallow: /dataHubAPI.php/\nDisallow: /devconfig.php/\nDisallow: /devpublicAPI.php/\nDisallow: /devrest.php/\nDisallow: /devuaRest.php/\nDisallow: /index.php/\nDisallow: /preview.php/\nDisallow: /profiler.php/\nDisallow: /publicAPI.php/\nDisallow: /rest.php/\nDisallow: /rest.V1.php/\nDisallow: /sso.php/ \nDisallow: /storage.php/\nDisallow: /ua.php/\nDisallow: /uaRest.php/\nDisallow: /widget.php/\nDisallow: /widgetAPI.php/\n\nUser-agent: anthropic-ai\nDisallow: /\nUser-agent: Claude-Web\nUser-agent: ClaudeBot\nSitemap: https://www.joueclub.fr/Assets/Rbs/Seo/sitemap-index.xml"
+  },
+  "www.king-jouet.com": {
+   "lu": 1791640662.2684598,
+   "texte": ""
+  },
+  "www.lagranderecre.fr": {
+   "lu": 1791640668.95829,
+   "texte": "User-agent: * \nDisallow: /_service.php/\nDisallow: /admin.php/\nDisallow: /ajax.php/\nDisallow: /ajax.V1.php/\nDisallow: /ajaxPreview.php/\nDisallow: /assistedCheckoutAPI.php/\nDisallow: /dataHubAPI.php/\nDisallow: /devconfig.php/\nDisallow: /devpublicAPI.php/\nDisallow: /devrest.php/\nDisallow: /devuaRest.php/\nDisallow: /index.php/\nDisallow: /preview.php/\nDisallow: /profiler.php/\nDisallow: /publicAPI.php/\nDisallow: /rest.php/\nDisallow: /rest.V1.php/\nDisallow: /sso.php/ \nDisallow: /storage.php/\nDisallow: /ua.php/\nDisallow: /uaRest.php/\nDisallow: /widget.php/\nDisallow: /widgetAPI.php/\nDisallow: /resultat-d-une-recherche-produits.html?*\nDisallow: /detail-du-panier.html*\nDisallow: /?*\nDisallow: /*?limit=*\nDisallow: /*?sortBy-*\nDisallow: /*?p=*\nDisallow: /search*\nDisallow: */filtres/\nDisallow: *?facetFilters\n\nSitemap: https://www.lagranderecre.fr/Assets/Rbs/Seo/sitemap-index.xml"
+  },
+  "www.micromania.fr": {
+   "lu": 1791640668.000205,
+   "texte": "<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?SWUDNSAI=31&xinfo=45-46992440-0%200NNN%20RT%281791640667973%2022%29%20q%280%20-1%20-1%201%29%20r%280%20-1%29%20B12%2811%2c11050145%2c0%29%20U18&incident_id=1008000090473345316-243395169665155693&edet=12&cinfo=0b000000&rpinfo=0&cts=gUUSwIvKNaSKwUyPXV4DPCC71G6%2fPik%2b3gw4sZpslejZznXLp%2f%2b1M4LDBNU%2fz09N&cip=20.51.206.81&mth=GET\" frameborder=0 width=\"100%\" height=\"100%\" marginheight=\"0px\" marginwidth=\"0px\">Request unsuccessful. Incapsula incident ID: 1008000090473345316-243395169665155693</iframe></body></html>"
+  },
+  "www.smythstoys.com": {
+   "lu": 1791640661.0996525,
+   "texte": "User-agent: *\nDisallow: */warenkorb\nDisallow: */checkout\nDisallow: */my-account\nDisallow: */mein-konto\nDisallow: */mon-compte\nDisallow: */confirm-order\nUser-agent: OAI-SearchBot\nAllow: /\nUser-agent: GPTBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: CazoodleBot\nDisallow: /\nUser-agent: dotbot\nDisallow: /\nUser-agent: Gigabot\nDisallow: /\nSitemap: https://www.smythstoys.com/uk/en-gb/sitemap.xml\nSitemap: https://www.smythstoys.com/ie/en-ie/sitemap.xml\nSitemap: https://www.smythstoys.com/de/de-de/sitemap.xml\nSitemap: https://www.smythstoys.com/at/de-at/sitemap.xml\nSitemap: https://www.smythstoys.com/ch/de-ch/sitemap.xml\nSitemap: https://www.smythstoys.com/fr/fr-fr/sitemap.xml\nSitemap: https://www.smythstoys.com/nl/nl-nl/sitemap.xml\nSitemap: https://www.smythstoys.com/be/fr-be/sitemap.xml\nSitemap: https://www.smythstoys.com/be/nl-be/sitemap.xml\n"
+  }
+ },
+ "signaux": {
+  "alertetgo|https://alertetgo.com/?p=113867": {
+   "qualifie": false,
+   "vu": 1791337444.6306903
+  },
+  "alertetgo|https://alertetgo.com/?p=113871": {
+   "qualifie": false,
+   "vu": 1791337444.6309333
+  },
+  "alertetgo|https://alertetgo.com/?p=173657": {
+   "qualifie": false,
+   "vu": 1791337444.6325164
+  },
+  "alertetgo|https://alertetgo.com/?p=250733": {
+   "qualifie": false,
+   "vu": 1791337444.63126
+  },
+  "alertetgo|https://alertetgo.com/?p=251830": {
+   "qualifie": false,
+   "vu": 1791337444.6304324
+  },
+  "alertetgo|https://alertetgo.com/?p=271009": {
+   "qualifie": false,
+   "vu": 1791337444.6322777
+  },
+  "alertetgo|https://alertetgo.com/?p=271431": {
+   "qualifie": false,
+   "vu": 1791337444.632048
+  },
+  "alertetgo|https://alertetgo.com/?p=271889": {
+   "qualifie": false,
+   "vu": 1791337444.63177
+  },
+  "alertetgo|https://alertetgo.com/?p=271908": {
+   "qualifie": false,
+   "vu": 1791337444.63151
+  },
+  "alertetgo|https://alertetgo.com/?p=272368": {
+   "qualifie": false,
+   "vu": 1791503442.5297132
+  },
+  "alertetgo|https://alertetgo.com/?p=272374": {
+   "qualifie": false,
+   "vu": 1791503442.5293522
+  },
+  "alertetgo|https://alertetgo.com/?page_id=272231": {
+   "qualifie": false,
+   "vu": 1791337444.6301155
+  },
+  "alertetgo|https://alertetgo.com/jcc-pokemon-bundle-6-boosters-30e-anniversaire-fr/": {
+   "qualifie": true,
+   "vu": 1791668959.6550329
+  },
+  "alertetgo|https://www.amazon.fr/dp/B0H8T1LY94": {
+   "qualifie": true,
+   "vu": 1791668959.654971
+  },
+  "alertetgo|https://www.amazon.fr/gp/product/B0H8T1LY94": {
+   "qualifie": true,
+   "vu": 1791595636.3930216
+  },
+  "alertetgo|https://www.bcd-jeux.fr/pokemon-tcg/39594--pokemon-anniversaire-30-ans-bundle-6-boosters-pokemon-0196214145221.html": {
+   "qualifie": false,
+   "vu": 1791668959.6550047
+  },
+  "alertetgo|https://www.maisondelapresse.com/fz9q8ht4ss023sh4qe89sn9jasay.html": {
+   "qualifie": true,
+   "vu": 1791404143.141457
+  },
+  "dealabs|3306299": {
+   "qualifie": false,
+   "vu": 1791358948.1093462
+  },
+  "dealabs|3337943": {
+   "qualifie": false,
+   "vu": 1791358948.1069481
+  },
+  "dealabs|3386640": {
+   "qualifie": false,
+   "vu": 1791358948.1130953
+  },
+  "dealabs|3396501": {
+   "qualifie": false,
+   "vu": 1791358948.1138937
+  },
+  "dealabs|3397918": {
+   "qualifie": false,
+   "vu": 1791358948.1111095
+  },
+  "dealabs|3401890": {
+   "qualifie": false,
+   "vu": 1791358948.1113546
+  },
+  "dealabs|3405571": {
+   "qualifie": false,
+   "vu": 1791358948.1152706
+  },
+  "dealabs|3407241": {
+   "qualifie": false,
+   "vu": 1791418497.5063972
+  },
+  "dealabs|3411020": {
+   "qualifie": false,
+   "vu": 1791358948.1082416
+  },
+  "dealabs|3411082": {
+   "qualifie": false,
+   "vu": 1791358948.1141741
+  },
+  "dealabs|3411722": {
+   "qualifie": false,
+   "vu": 1791358948.108538
+  },
+  "dealabs|3412200": {
+   "qualifie": false,
+   "vu": 1791418497.5062864
+  },
+  "dealabs|3412618": {
+   "qualifie": false,
+   "vu": 1791358948.1150193
+  },
+  "dealabs|3414134": {
+   "qualifie": false,
+   "vu": 1791336849.7403057
+  },
+  "dealabs|3414268": {
+   "qualifie": false,
+   "vu": 1791336849.7399547
+  },
+  "dealabs|3414413": {
+   "qualifie": false,
+   "vu": 1791336849.740059
+  },
+  "dealabs|3414533": {
+   "qualifie": false,
+   "vu": 1791336849.7401767
+  },
+  "dealabs|3415046": {
+   "qualifie": false,
+   "vu": 1791336849.7397025
+  },
+  "dealabs|3415610": {
+   "qualifie": false,
+   "vu": 1791336849.7398522
+  },
+  "dealabs|3415860": {
+   "qualifie": false,
+   "vu": 1791336849.7395988
+  },
+  "dealabs|3416361": {
+   "qualifie": false,
+   "vu": 1791336849.739496
+  },
+  "dealabs|3418392": {
+   "qualifie": false,
+   "vu": 1791336849.7392585
+  },
+  "dealabs|3418423": {
+   "qualifie": false,
+   "vu": 1791336849.7393696
+  },
+  "dealabs|3418856": {
+   "qualifie": false,
+   "vu": 1791336849.7391694
+  },
+  "dealabs|3420043": {
+   "qualifie": false,
+   "vu": 1791336849.739078
+  },
+  "dealabs|3420768": {
+   "qualifie": false,
+   "vu": 1791336849.7388258
+  },
+  "dealabs|3420869": {
+   "qualifie": false,
+   "vu": 1791336849.7389581
+  },
+  "dealabs|3422131": {
+   "qualifie": false,
+   "vu": 1791336849.73844
+  },
+  "dealabs|3422161": {
+   "qualifie": false,
+   "vu": 1791336849.7385654
+  },
+  "dealabs|3422191": {
+   "qualifie": false,
+   "vu": 1791336849.7387083
+  },
+  "dealabs|3423046": {
+   "qualifie": false,
+   "vu": 1791336849.738328
+  },
+  "dealabs|3423189": {
+   "qualifie": false,
+   "vu": 1791336849.738196
+  },
+  "dealabs|3424117": {
+   "qualifie": false,
+   "vu": 1791336849.738077
+  },
+  "dealabs|3424316": {
+   "qualifie": false,
+   "vu": 1791336849.7379594
+  },
+  "dealabs|3424320": {
+   "qualifie": false,
+   "vu": 1791336849.7378163
+  },
+  "dealabs|3424492": {
+   "qualifie": false,
+   "vu": 1791336849.7376015
+  },
+  "dealabs|3424616": {
+   "qualifie": false,
+   "vu": 1791336849.7377045
+  },
+  "dealabs|3424829": {
+   "qualifie": false,
+   "vu": 1791336849.737507
+  },
+  "dealabs|3426086": {
+   "qualifie": false,
+   "vu": 1791336849.737416
+  },
+  "dealabs|3426302": {
+   "qualifie": false,
+   "vu": 1791336849.7372992
+  },
+  "dealabs|3426378": {
+   "qualifie": false,
+   "vu": 1791336849.7370982
+  },
+  "dealabs|3426514": {
+   "qualifie": false,
+   "vu": 1791336849.737198
+  },
+  "dealabs|3427352": {
+   "qualifie": false,
+   "vu": 1791336849.7369962
+  },
+  "dealabs|3427746": {
+   "qualifie": false,
+   "vu": 1791384409.9308698
+  },
+  "dealabs|3428254": {
+   "qualifie": false,
+   "vu": 1791418497.5061328
+  },
+  "dealabs|3428376": {
+   "qualifie": false,
+   "vu": 1791440174.522292
+  },
+  "dealabs|3428452": {
+   "qualifie": false,
+   "vu": 1791440174.522429
+  },
+  "dealabs|3428617": {
+   "qualifie": false,
+   "vu": 1791466666.8497214
+  },
+  "dealabs|3429327": {
+   "qualifie": false,
+   "vu": 1791544949.67902
+  }
+ },
+ "sitemaps": {
+  "joueclub": {
+   "i": 1,
+   "liste": [
+    "https://www.joueclub.fr/Assets/Rbs/Seo/100185/fr_FR/Rbs_Catalog_Product.1.xml",
+    "https://www.joueclub.fr/Assets/Rbs/Seo/100185/fr_FR/Rbs_Catalog_Product.2.xml",
+    "https://www.joueclub.fr/Assets/Rbs/Seo/100185/fr_FR/Rbs_Catalog_Product.3.xml"
+   ],
+   "lu": 1791582704.220853
+  },
+  "lagranderecre": {
+   "i": 0,
+   "liste": [
+    "https://www.lagranderecre.fr/Assets/Rbs/Seo/100052/fr_FR/Rbs_Catalog_Product.1.xml"
+   ],
+   "lu": 1791582702.659504
+  }
+ },
+ "sources_initialisees": [
+  "dealabs",
+  "alertetgo-flux",
+  "sitemap:https://www.joueclub.fr/Assets/Rbs/Seo/100185/fr_FR/Rbs_Catalog_Product.1.xml",
+  "sitemap:https://www.lagranderecre.fr/Assets/Rbs/Seo/100052/fr_FR/Rbs_Catalog_Product.1.xml"
+ ],
+ "taches": {
+  "decouverte|bundle-30ans|amazon": 1791440171.3585546,
+  "decouverte|bundle-30ans|auchan": 1791595630.653961,
+  "decouverte|classeur-30ans|amazon": 1791595633.7762861,
+  "decouverte|classeur-30ans|auchan": 1791487549.120463,
+  "decouverte|delta-bundle|amazon": 1791544946.3646362,
+  "decouverte|delta-bundle|auchan": 1791617571.8751938,
+  "decouverte|delta-display|amazon": 1791582704.5719929,
+  "decouverte|delta-display|auchan": 1791466663.957015,
+  "decouverte|delta-etb|amazon": 1791519113.9816918,
+  "decouverte|delta-etb|auchan": 1791582702.2171109,
+  "decouverte|delta-tripack|amazon": 1791567031.8909967,
+  "decouverte|delta-tripack|auchan": 1791668943.0695415,
+  "decouverte|etb-30ans|amazon": 1791487550.640184,
+  "decouverte|etb-30ans|auchan": 1791656093.8269293,
+  "decouverte|minitin-30ans|amazon": 1791466664.3766553,
+  "decouverte|minitin-30ans|auchan": 1791640667.613777,
+  "decouverte|upc-30ans|amazon": 1791503439.5031188,
+  "decouverte|upc-30ans|auchan": 1791567034.1140804,
+  "fiche|bundle-30ans|amazon|https://www.amazon.fr/dp/B0H8T1LY94": 1791617572.0618021,
+  "fiche|bundle-30ans|joueclub|https://www.joueclub.fr/pokemon/pokemon-bundle-6-boosters-0196214145221.html": 1791656090.7170944,
+  "fiche|bundle-30ans|lagranderecre|https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/-6-boosters-pokemon-30e-anniversaire.html": 1791656095.466757,
+  "fiche|bundle-30ans|leclerc|https://www.e.leclerc/fp/0196214145221": 1791668957.0542781,
+  "fiche|bundle-30ans|smyths|https://www.smythstoys.com/fr/fr-fr/marques/pokemon/pokemon-bundle-6-boosters-30eme-anniversaire/p/261769": 1791640661.1129818,
+  "fiche|delta-etb|leclerc|https://www.e.leclerc/fp/0196214143913": 1791640661.844721,
+  "fiche|etb-30ans|carrefour|https://www.carrefour.fr/p/cartes-a-jouer-et-a-collectionner-coffret-dresseur-d-elite-30e-anniversaire-pokemon-0196214144835": 1791640661.271851,
+  "fiche|etb-30ans|cdiscount|https://www.cdiscount.com/juniors/jeux-de-societe-cartes/pokemon-etb-coffret-dresseur-d-elite-30e-anniv/f-120791604-pok196214144835.html": 1791640662.728979,
+  "fiche|etb-30ans|leclerc|https://www.e.leclerc/fp/0196214144835": 1791656094.6985161,
+  "fiche|etb-30ans|micromania|https://www.micromania.fr/p/coffret-dresseur-d-elite-pokemon-30-ans-162654.html": 1791640668.0496483,
+  "fiche|minitin-30ans|joueclub|https://www.joueclub.fr/pokemon/pokemon-30eme-anniversaire-mini-tin-0196214146297.html": 1791640668.6216607,
+  "fiche|minitin-30ans|kingjouet|https://www.king-jouet.com/jeu-jouet/jeux-societes/cartes-a-collectionner/ref-1034918-pokemon-30-ans-mini-tin-assortiment.htm": 1791640662.3898118,
+  "fiche|minitin-30ans|lagranderecre|https://www.lagranderecre.fr/jeux-de-societe/cartes-a-collectionner/mini-tin-pokemon-30e-anniversaire.html": 1791640669.3416827,
+  "fiche|minitin-30ans|leclerc|https://www.e.leclerc/fp/0196214146297": 1791617570.3276126,
+  "secours|alertetgo|flux": 1791656098.588195,
+  "secours|alertetgo|https://alertetgo.com/jcc-pokemon-bundle-6-boosters-30e-anniversaire-fr/": 1791668959.655035,
+  "secours|crocodeal|flux": 1791640671.03354,
+  "secours|dealabs": 1791668957.4415307,
+  "sitemap|joueclub": 1791668952.2529173,
+  "sitemap|lagranderecre": 1791668956.737015
+ },
+ "veille": {
+  "joueclub": [],
+  "lagranderecre": []
+ }
+}
